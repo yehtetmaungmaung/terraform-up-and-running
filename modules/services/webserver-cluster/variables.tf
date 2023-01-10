@@ -34,7 +34,7 @@ variable "max_size" {
 }
 
 variable "custom_tags" {
-  desdescription = "Custom tags to set on the instances in the auto sacling groups" 
+  description = "Custom tags to set on the instances in the auto sacling groups" 
   type = map(string)
   default = {}
 }

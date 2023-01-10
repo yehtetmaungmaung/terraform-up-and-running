@@ -1,16 +1,16 @@
+provider "aws" {
+    region = "us-east-2"
+}
+
 terraform {
   backend "s3" {
     bucket = "terraform-up-and-running-state-by-yehtetmaungmaung"
-    key = "stage/data-stores/mysql/terraform.tfstate"
+    key = "prod/data-stores/mysql/terraform.tfstate"
     region = "us-east-2"
 
     dynamodb_table = "terraform-up-and-running-locks"
     encrypt = true
   }
-}
-
-provider "aws" {
-    region = "us-east-2"
 }
 
 resource "aws_db_instance" "example" {
