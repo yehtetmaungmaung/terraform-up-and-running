@@ -14,3 +14,7 @@ output "bios" {
 output "upper_roles" {
   value = {for name, role in var.hero_thousand_faces : upper(name) => upper(role)}
 }
+
+output "for_directive" {
+  value = "%{for name in var.names}${name}, %{endfor}"
+}
