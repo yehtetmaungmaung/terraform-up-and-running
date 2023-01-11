@@ -1,3 +1,14 @@
+provider "aws" {
+  region = "us-east-2"
+
+  default_tags {
+    tags = {
+      Owner = "team-foo"
+      ManagedBy = "Terraform"
+    }
+  }
+}
+
 data "terraform_remote_state" "db" {
   backend = "s3"
 
