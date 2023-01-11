@@ -24,6 +24,7 @@ module "webserver_cluster" {
   min_size      = 2
   max_size      = 2
   server_port   = 8080
+  enable_autoscaling = false
 }
 
 resource "aws_security_group_rule" "allow_testing_inbound" {
